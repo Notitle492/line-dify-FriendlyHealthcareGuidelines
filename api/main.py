@@ -42,7 +42,7 @@ async def callback(request: Request, x_line_signature: str = Header(None)):
                     json={
                         "inputs": {},
                         "query": user_message,
-                        "response_mode": "blocking", # Agent 必須使用串流模式
+                        "response_mode": "streaming", # Agent 必須使用串流模式
                         "user": user_id
                     },
                     stream=True # 啟用 requests 的串流讀取
